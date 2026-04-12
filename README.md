@@ -112,3 +112,19 @@ Technical healthcare systems
 Real-world usability
 
 👉 Turning complexity into clarity using AI
+## 📸 Demo
+
+### Patient View
+<img width="2878" height="1428" alt="image" src="https://github.com/user-attachments/assets/aba006c7-c169-4e96-b03e-9bddfc82ac21" />
+
+### Provider View
+<img width="2864" height="1402" alt="image" src="https://github.com/user-attachments/assets/48033b28-5694-4bc7-8586-ad0c3569ae74" />
+
+### Analyst View
+<img width="1432" height="701" alt="image" src="https://github.com/user-attachments/assets/a8b0a947-b4b6-4bb2-a6aa-d136a8e1255e" />
+
+### Models in the OpenAI View
+<img width="1431" height="690" alt="image" src="https://github.com/user-attachments/assets/5513b562-d110-4d7b-9ea4-cc96506e2b04" />
+
+### Knowledge Base
+<img width="1437" height="459" alt="image" src="https://github.com/user-attachments/assets/cb3bd09d-dcd5-4d20-bc4c-3e3e9380072f" />
