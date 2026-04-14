@@ -23,11 +23,13 @@ Interprets claim rejection messages
 Explains the issue in plain English
 Suggests next steps
 Adapts output based on user persona
+
 Personas supported:
 🧑‍⚕️ Patient
 🏥 Provider (billing staff)
 🧑‍💻 Analyst / Developer
 ⚙️ Tech Stack
+
 LLM: Ollama (local models like Gemma / Qwen)
 UI: Open WebUI
 Document Parsing: Docling (PDF → Markdown)
@@ -40,13 +42,17 @@ Language: Python (for scripts & processing)
 This project strictly follows responsible AI principles:
 
 ✅ Uses only public healthcare documentation (CMS, Medicaid, etc.)
+
 ✅ Uses synthetic examples for testing
+
 ❌ Does NOT use real patient data (PHI)
+
 ❌ Does NOT use internal Medicaid or employer data
 
 👉 Designed to be safe, reproducible, and shareable
 
 **📥 Sample Input**
+
 Claim rejected: Member not eligible on date of service
 
 **📤 Sample Outputs**
@@ -68,6 +74,7 @@ tests/        # Synthetic claim scenarios
 outputs/      # Evaluation results
 scripts/      # Helper scripts
 screenshots/  # Demo visuals
+
 🧪 Evaluation Approach
 Synthetic claim rejection scenarios
 Multi-persona output comparison
@@ -108,8 +115,7 @@ This is not just a chatbot.
 
 It is an attempt to bridge the gap between:
 
-Technical healthcare systems
-Real-world usability
+Technical healthcare systems & Real-world usability
 
 👉 Turning complexity into clarity using AI
 ## 📸 Demo
