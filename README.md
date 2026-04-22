@@ -40,7 +40,12 @@ Personas supported:
 
 ⚙️ Tech Stack
 
-LLM: Ollama (local models like Gemma / Qwen)
+**Models Used**
+
+- Gemma 3 1B
+- Qwen3 4B GGUF (Q4_K_M)
+
+These models were selected to run locally on Apple Silicon with limited memory while still supporting role-based healthcare claim explanation tasks.
 
 UI: Open WebUI
 
