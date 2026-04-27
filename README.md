@@ -206,11 +206,18 @@ Following AI engineer recommendations:
 
 ## 📸 Screenshots
 
-(Add here:)
-
 * Open WebUI models
+* <img width="1439" height="801" alt="image" src="https://github.com/user-attachments/assets/8873cc26-e731-4bf2-8399-bf9053a7d793" />
+
+* <img width="1407" height="800" alt="image" src="https://github.com/user-attachments/assets/168eb4dd-b7d4-49be-8d1d-6236043983b7" />
+
 * Knowledge base setup
+* <img width="1428" height="805" alt="image" src="https://github.com/user-attachments/assets/4dd63ef3-da49-4a7f-903f-bf4fc446766c" />
+
 * Example outputs
+# Provider AI Assistant
+  <img width="1432" height="713" alt="image" src="https://github.com/user-attachments/assets/f6350351-7594-43c7-becb-b5f728bb83c8" />
+
 
 ---
 
