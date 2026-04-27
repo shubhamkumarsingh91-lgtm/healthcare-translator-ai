@@ -1,173 +1,232 @@
-**🚀 Healthcare Claims & EDI Translator AI**
+🧠 Healthcare Claims Assistant AI (Local RAG System)
 
-🧠** Problem**
+## 📌 Overview
 
-Healthcare systems rely on complex formats such as EDI 837, MMIS workflows, and policy-driven validation rules.
+This project is a **local AI-powered healthcare claims assistant** designed to translate and analyze claim rejection messages for different users:
 
-**This creates major challenges:**
+* 🧑‍⚕️ Patients → simple explanations
+* 🏥 Providers → operational billing guidance
+* 🧠 Analysts → technical debugging insights
 
-Claim rejections are hard to understand
+The system uses **persona-based prompting + structured knowledge base (RAG)** to generate grounded and actionable responses.
 
-Providers struggle to fix billing errors
+---
 
-Analysts spend time decoding technical messages
+## 🧩 Key Features
 
-Patients receive unclear explanations
+* ✅ Persona-based AI (Patient / Provider / Analyst)
+* ✅ Structured healthcare knowledge base (Markdown)
+* ✅ Retrieval-Augmented Generation (RAG)
+* ✅ Multi-step prompt testing
+* ✅ Automated testing pipeline (Python script)
+* ✅ Local LLM execution (no external APIs)
 
-> The core issue is translation of technical healthcare language into actionable understanding
+---
 
-**💡 Solution**
+## 🏗️ System Architecture
 
-This project builds a persona-aware AI system that translates healthcare claim and EDI messages into clear, role-specific explanations.
+```text
+**User Input
+   ↓
+System Prompt (Persona)
+   ↓
+Knowledge Base (RAG)
+   ↓
+Local LLM (Ollama)
+   ↓
+Structured Output**
+```
 
-**The system:**
+---
 
-Interprets claim rejection messages
+## 👥 Persona-Based Design
 
-Explains the issue in plain English
+Each role uses a dedicated system prompt:
 
-Suggests next steps
+### Patient Translator
 
-Adapts output based on user persona
+* Explains rejections in simple terms
+* Focuses on clarity and next steps
 
-Personas supported:
+### Provider Translator
 
-🧑‍⚕️ Patient
+* Provides operational checklist
+* Focuses on billing workflows and verification
 
-🏥 Provider (billing staff)
+### Analyst Translator
 
-🧑‍💻 Analyst / Developer
+* Provides technical interpretation
+* Focuses on debugging and system validation
 
-⚙️ Tech Stack
+---
 
-**Models Used**
+## 📚 Knowledge Base (RAG)
 
-- Gemma 3 1B
-- Qwen3 4B GGUF (Q4_K_M)
+The system uses structured markdown files:
 
-These models were selected to run locally on Apple Silicon with limited memory while still supporting role-based healthcare claim explanation tasks.
+```text
+Claims_Translator_KB
+- eligibility.md
+- coding.md
+- provider.md
+- authorization.md
+- rejection_mapping.md
+- cause_fix_mapping.md
+```
 
-UI: Open WebUI
+### Benefits:
 
-Document Parsing: Docling (PDF → Markdown)
+* Improved accuracy
+* Reduced hallucination
+* Consistent outputs
 
-Architecture: Retrieval-Augmented Generation (RAG)
+---
 
-Environment: Docker + macOS (M1)
+## 🧪 Testing Approach
 
-Language: Python (for scripts & processing)
+### Multi-Step Prompt Testing
 
-**🔒 Compliance & Ethics**
+I created structured prompts to test model reasoning:
 
-This project strictly follows responsible AI principles:
+```text
+Example:
+Claim rejected: Missing prior authorization
 
-✅ Uses only public healthcare documentation (CMS, Medicaid, etc.)
+1. Explain for provider
+2. Identify root cause
+3. List what to verify
+4. Suggest next action
+```
 
-✅ Uses synthetic examples for testing
+---
 
-❌ Does NOT use real patient data (PHI)
+### Automated Testing Script
 
-❌ Does NOT use internal Medicaid or employer data
+```bash
+scripts/run_tests.py
+```
 
-👉 Designed to be safe, reproducible, and shareable
+* Runs multiple prompts
+* Tests all personas
+* Saves outputs automatically
 
-**📥 Sample Input**
+---
 
-Claim rejected: Member not eligible on date of service
+### Results
 
-**📤 Sample Outputs**
+```bash
+outputs/multi_step_results.md
+```
 
-🧑‍⚕️ Patient
+This helped evaluate:
 
-Your insurance coverage was not active on the date of your visit. Please contact your provider or insurance company to verify your eligibility.
+* Structured reasoning ability
+* Prompt-following accuracy
+* Output consistency
+* Model limitations
 
-**🏥 Provider**
+---
 
-Eligibility check failed. Verify the member ID and coverage dates before resubmitting the claim.
+## ⚙️ Tech Stack
 
-**🧑‍💻 Analyst**
+* Open WebUI (local AI interface)
+* Ollama (LLM runtime)
+* Python (requests, testing scripts)
+* Markdown (knowledge base)
+* GitHub (version control)
 
-Eligibility validation failed during claim processing. Check subscriber ID and coverage data in the eligibility system for alignment.
+---
 
-📂 Project Structure
-kb_md/        # Processed markdown documents (from Docling)
+## 🤖 Models Used
 
-tests/        # Synthetic claim scenarios
+| Model                  | Size         | Usage               |
+| ---------------------- | ------------ | ------------------- |
+| Qwen3 4B (GGUF Q4_K_M) | ~4B params   | Primary model       |
+| Gemma 1B–3B            | Small models | Lightweight testing |
 
-outputs/      # Evaluation results
+### Notes:
 
-scripts/      # Helper scripts
+* Runs locally on MacBook (CPU-based)
+* Performance varies with model size
+* Larger models improve reasoning but increase latency
 
-screenshots/  # Demo visuals
+---
 
-🧪 Evaluation Approach
-Synthetic claim rejection scenarios
+## 📊 Example Output (Provider)
 
-Multi-persona output comparison
+```text
+Claim rejected: Missing prior authorization
 
-Grounded responses only (no hallucinations)
+1. Likely cause:
+Procedure requiring prior authorization was billed without approval.
 
-Iterative improvement via RAG tuning
+2. What to verify:
+- Check payer portal for authorization requirement
+- Verify submission before service date
+- Confirm provider NPI matches authorization
 
-**🗺️ Roadmap**
+3. Next action:
+- Submit retro-authorization if allowed
+- Attach clinical documentation
+- Resubmit claim
+```
 
-Phase 1 (Current)
+---
 
-Basic Translator AI (RAG + personas)
+## 🧠 Key Learnings
 
-Public document ingestion via Docling
+* Prompt structure strongly impacts output quality
+* Multi-step prompts reveal model limitations
+* Smaller models require more explicit instructions
+* RAG improves grounding but requires clean data
+* Persona-based design improves usability
 
-Phase 2
-Provider fix checklists
+---
 
-Structured troubleshooting guidance
+## 🔧 Current Focus (Based on Feedback)
 
-Phase 3
-MMIS workflow mapping
+Following AI engineer recommendations:
 
-Claim lifecycle explanations
+* ✔ Multi-step prompt testing (completed)
+* ✔ Model transparency added (this README)
+* 🔄 Improving operational accuracy of outputs
+* 🔄 Exploring Skills (prompt modularization)
 
-Phase 4
-AI governance layer
+---
 
-Confidence scoring
+## 🚀 Next Steps
 
-Refusal handling for unsafe queries
+* Improve output precision (reduce redundancy)
+* Add more complex multi-step scenarios
+* Expand Skills (task-based prompting)
+* Explore Tools (function-based automation)
+* Add lightweight UI/dashboard
 
-**🎯 Goal**
+---
 
-To build an AI system that reduces operational friction in healthcare systems by making complex technical processes understandable and actionable.
+## 📸 Screenshots
 
-**👨‍💻 Author**
+(Add here:)
 
-Shubham Singh
+* Open WebUI models
+* Knowledge base setup
+* Example outputs
 
-**🧠 Why this project matters**
+---
 
-This is not just a chatbot.
+## 💡 Motivation
 
-It is an attempt to bridge the gap between:
+Healthcare claim systems are complex and often difficult to understand.
 
-Technical healthcare systems & Real-world usability
+This project explores how **AI can bridge the gap between technical systems and real users** by adapting responses based on context and role.
 
-👉 Turning complexity into clarity using AI
-## 📸 Demo
+---
 
-### Patient View
+## ⚠️ Disclaimer
 
-<img width="2878" height="1428" alt="image" src="https://github.com/user-attachments/assets/aba006c7-c169-4e96-b03e-9bddfc82ac21" />
+This is a learning and experimental project.
+Not intended for real medical or billing decisions.
 
-### Provider View
+---
 
-<img width="2864" height="1402" alt="image" src="https://github.com/user-attachments/assets/48033b28-5694-4bc7-8586-ad0c3569ae74" />
-
-### Analyst View
-
-<img width="1432" height="701" alt="image" src="https://github.com/user-attachments/assets/a8b0a947-b4b6-4bb2-a6aa-d136a8e1255e" />
-
-### Models in the OpenAI View
-
-<img width="1431" height="690" alt="image" src="https://github.com/user-attachments/assets/5513b562-d110-4d7b-9ea4-cc96506e2b04" />
-
-### Knowledge Base
 <img width="1437" height="459" alt="image" src="https://github.com/user-attachments/assets/cb3bd09d-dcd5-4d20-bc4c-3e3e9380072f" />
