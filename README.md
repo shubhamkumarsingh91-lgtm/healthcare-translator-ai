@@ -227,6 +227,4 @@ This project explores how **AI can bridge the gap between technical systems and 
 This is a learning and experimental project.
 Not intended for real medical or billing decisions.
 
----
-
-<img width="1437" height="459" alt="image" src="https://github.com/user-attachments/assets/cb3bd09d-dcd5-4d20-bc4c-3e3e9380072f" />
+--
