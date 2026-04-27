@@ -1,4 +1,4 @@
-🧠 Healthcare Claims Assistant AI (Local RAG System)
+# 🧠 Healthcare Claims Assistant AI (Local RAG System)
 
 ## 📌 Overview
 
