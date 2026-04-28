@@ -35,7 +35,7 @@ This project builds an **AI Claims Assistant** that:
 
 The goal is to move from **raw error messages → intelligent, guided workflows**
 
-## 📌 Overview
+## Project
 
 This project is an **AI-powered Healthcare Claims Assistant** designed to help users understand and resolve claim rejection issues.
 
