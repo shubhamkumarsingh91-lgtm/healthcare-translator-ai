@@ -231,11 +231,23 @@ Based on feedback:
 
 # 📸 Screenshots
 
-(Add here:)
-
 * Open WebUI models
+<img width="1433" height="857" alt="image" src="https://github.com/user-attachments/assets/d8cb260c-7593-42c8-ab13-1dd585491e07" />
+
 * Knowledge base
+<img width="1438" height="799" alt="image" src="https://github.com/user-attachments/assets/1307d898-88af-473c-b6ec-73ba6af58aef" />
+
+<img width="1430" height="812" alt="image" src="https://github.com/user-attachments/assets/430420ce-c786-485a-b5ef-7c45dfb6e682" />
+
+<img width="1440" height="793" alt="image" src="https://github.com/user-attachments/assets/22e3f442-4cbb-4bf5-8305-f255d533d310" />
+
+
 * Tool usage example
+
+<img width="1440" height="808" alt="image" src="https://github.com/user-attachments/assets/1bacd2c5-d419-46d0-b84e-bfc9a3524581" />
+
+<img width="1435" height="855" alt="image" src="https://github.com/user-attachments/assets/70fa27fd-f9f1-4f65-a288-8f9ffc0a7813" />
+
 
 ---
 
