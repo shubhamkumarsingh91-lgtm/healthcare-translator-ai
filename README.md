@@ -162,6 +162,21 @@ Resubmit the claim after correcting any discrepancies in the claim data (e.g., d
 **Missing information**  
 The specific **date of service** and **payer response details** are needed to fully diagnose the mismatch.
 
+**Expected Behavior:**
+- Use tool output as source of truth  
+- Avoid hallucination (no fake error codes)  
+- Provide structured operational steps  
+
+---
+
+### Why this matters
+
+These tests ensure the AI system behaves like a real-world healthcare analyst:
+- Accurate  
+- Consistent  
+- Actionable  
+- Reliable under complex conditions
+
 ---
 
 ## ⚙️ Tech Stack
