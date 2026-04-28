@@ -115,15 +115,52 @@ scripts/run_tests.py
 ### Results
 
 ```bash
-outputs/multi_step_results.md
-```
+## 🧪 Advanced Testing
 
-This helped evaluate:
+This project includes advanced test scenarios to evaluate real-world AI behavior.
 
-* Structured reasoning ability
-* Prompt-following accuracy
-* Output consistency
-* Model limitations
+### Test Files
+
+- `tests/advanced_test_scenarios.md`  
+  Contains multi-step and edge-case claim rejection scenarios.
+
+- `outputs/advanced_test_results.md`  
+  Stores model outputs and evaluation notes.
+
+---
+
+### What is being tested
+
+These scenarios evaluate:
+
+- Multi-step reasoning  
+- Tool usage (eligibility check)  
+- RAG grounding (knowledge base usage)  
+- Conflict handling (tool vs claim rejection)  
+- Structured provider workflows  
+
+---
+
+### Example Scenario
+
+**Input:**
+
+Claim rejected: Member not eligible. Check eligibility for member ID 12345. Use the tool result as source of truth. Explain the likely cause, what to verify, next action, and missing information.
+
+Output:
+
+The rejection message "Member not eligible" may be a misclassification, as the eligibility tool result for member ID 12345 is **ACTIVE** [1]. This indicates the member is eligible, so the rejection likely stems from a mismatch between the submitted claim data and the payer’s current eligibility record.  
+
+**What to verify**  
+- Confirm the **date of service** on the claim aligns with the member’s coverage period.  
+- Verify the **member ID** matches the one on the insurance card and payer records.  
+- Check if the **payer and plan details** selected during submission match the current eligibility record.  
+
+**Next action**  
+Resubmit the claim after correcting any discrepancies in the claim data (e.g., date of service, member ID, payer plan) and confirming eligibility for the exact date of service.  
+
+**Missing information**  
+The specific **date of service** and **payer response details** are needed to fully diagnose the mismatch.
 
 ---
 
