@@ -6,14 +6,63 @@
 
 ## 📌 Overview
 
-This project started as a **Healthcare Claims Translator AI** and evolved into an **AI Claims Assistant Platform**.
+## ❗ Problem
 
-It translates complex healthcare claim rejection messages into **structured, actionable outputs** tailored for different roles:
+Healthcare claim rejections are complex, technical, and difficult to interpret.
 
-* 🏥 Providers (billing workflows)
-* 🧑‍⚕️ Patients (simple explanations)
-* 🧠 Analysts (technical debugging)
+* Providers struggle to understand rejection reasons and next steps
+* Patients receive unclear explanations
+* Analysts spend time debugging issues manually
+* Existing systems provide raw error codes without actionable guidance
 
+This leads to:
+
+* delayed claim processing
+* increased operational cost
+* poor communication between stakeholders
+
+---
+
+## 💡 Solution
+
+This project builds an **AI Claims Assistant** that:
+
+* translates claim rejection messages into structured, actionable insights
+* adapts explanations based on user role (Provider, Patient, Analyst)
+* uses a knowledge base (RAG) for grounded responses
+* integrates tools (e.g., eligibility check) for validation
+* enforces structured outputs for operational clarity
+
+The goal is to move from **raw error messages → intelligent, guided workflows**
+
+## 📌 Overview
+
+This project is an **AI-powered Healthcare Claims Assistant** designed to help users understand and resolve claim rejection issues.
+
+It transforms complex claim rejection messages into **clear, structured, and actionable outputs** tailored for different roles:
+
+* 🏥 Providers → operational billing guidance
+* 🧑‍⚕️ Patients → simple explanations
+* 🧠 Analysts → technical debugging insights
+
+The system combines:
+
+* persona-based prompting
+* retrieval-augmented generation (RAG)
+* tool-based validation
+
+to simulate real-world healthcare claim workflows.
+
+## 🎯 Project Goal
+
+The goal of this project is to move beyond simple AI responses and build a system that:
+
+* understands claim rejection context
+* reasons through multiple conditions
+* validates information using tools
+* produces structured, actionable workflows
+
+This is an early step toward building a **real AI assistant for healthcare operations**, not just a chatbot.
 ---
 
 # 🚀 Project Evolution
