@@ -22,6 +22,13 @@ The system uses **persona-based prompting + structured knowledge base (RAG)** to
 * ✅ Local LLM execution (no external APIs)
 
 ---
+## 🚀 Upgrades Key Features
+
+- Multi-agent AI (Provider, Analyst, Patient)
+- RAG-based knowledge system
+- Tool-integrated reasoning (eligibility check)
+- Structured output enforcement
+- Advanced testing pipeline
 
 ## 🏗️ System Architecture
 
@@ -38,6 +45,31 @@ Structured Output**
 ```
 
 ---
+
+## 🏗️ New Upgraded System Architecture
+
+The project has evolved from a simple healthcare claims translator into an early-stage **AI Claims Assistant Platform**.
+
+### Architecture Flow
+
+```text
+User Claim Rejection Input
+        ↓
+Open WebUI Model Interface
+        ↓
+Persona System Prompt
+(Patient / Provider / Analyst)
+        ↓
+Knowledge Base Retrieval (RAG)
+        ↓
+Tool Layer
+(e.g., eligibility check)
+        ↓
+Local LLM via Ollama
+(Qwen / Gemma)
+        ↓
+Structured Role-Based Output
+
 
 ## 👥 Persona-Based Design
 
